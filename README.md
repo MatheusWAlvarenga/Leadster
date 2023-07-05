@@ -53,14 +53,15 @@ No geral, o uso do Tailwind CSS oferece uma abordagem rápida, flexível e consi
 ## Estrutura de Arquivos
 
 ```
+├── app/
+│   ├── pages...
+│   └── layout
+│   └── ...
 ├── components/
-│   ├── VideoList.tsx
-│   └── ...
-├── pages/
-│   ├── index.tsx
-│   └── ...
-├── styles/
-│   ├── GlobalStyles.ts
+│   ├── Buttons
+│   ├── Footer
+│   ├── Header
+│   ├── Boards
 │   └── ...
 ├── public/
 │   ├── videos.json
@@ -72,7 +73,7 @@ No geral, o uso do Tailwind CSS oferece uma abordagem rápida, flexível e consi
 
 - `components/`: diretório que contém os componentes reutilizáveis da aplicação.
 - `pages/`: diretório que contém as páginas do projeto, sendo `index.tsx` a página principal.
-- `styles/`: diretório que contém os estilos globais e componentes estilizados.
+- `layout/`: diretório que contém o layout global da aplicação.
 - `public/`: diretório que contém arquivos estáticos, como o arquivo de configuração JSON (`videos.json`).
 - `package.json`: arquivo que contém as dependências e scripts do projeto.
 - `README.md`: arquivo que você está lendo atualmente, contendo informações sobre o projeto.
