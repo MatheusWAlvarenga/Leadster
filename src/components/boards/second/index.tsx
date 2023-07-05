@@ -9,9 +9,9 @@ import selo from '@/assets/selo_RD.png'
 import rating from '@/assets/rating.webp'
 
 // components
-import { PrimaryButton } from '../buttons/primary'
+import { SecondButton } from '../../buttons/second'
 
-export function SecondaryBoard() {
+export function SecondBoard() {
   // const router = useRouter()
   function handleOnClick() {
     alert('onClick')
@@ -46,7 +46,7 @@ export function SecondaryBoard() {
           </div>
           <div className='flex w-full flex-col justify-center items-start border-t border-line-dark py-2  gap-1'>
             <div className='flex  justify-center items-center  p-2 gap-4'>
-              <PrimaryButton title='ver demonstração' />
+              <SecondButton title='ver demonstração' />
               <Image className='w-[16rem]' src={selo} alt='' />
             </div>
             <div className='flex w-full gap-2'>

@@ -40,7 +40,7 @@ export function ListFooter({ title, items }: ListFooterProps) {
                 return (
                   <div className='flex gap-4'>
                     <Link
-                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover transition duration-200'
+                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
                       key={item.id}
                       href='https://www.linkedin.com/company/getleadster/'
                       target='_blank'
@@ -48,7 +48,7 @@ export function ListFooter({ title, items }: ListFooterProps) {
                       <BiLogoLinkedin />
                     </Link>
                     <Link
-                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover transition duration-200'
+                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
                       key={item.id}
                       href='https://www.facebook.com/leadsterplatform/'
                       target='_blank'
@@ -56,7 +56,7 @@ export function ListFooter({ title, items }: ListFooterProps) {
                       <BiLogoFacebook />
                     </Link>
                     <Link
-                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover transition duration-200'
+                      className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
                       key={item.id}
                       href='https://www.instagram.com/leadster.com.br/'
                       target='_blank'
@@ -69,7 +69,7 @@ export function ListFooter({ title, items }: ListFooterProps) {
               case 'link':
                 return (
                   <Link
-                    className='flex font-primary text-base-subtitle font-thin text-xs underline-light-100 hover:underline  transition duration-300'
+                    className='flex font-primary text-base-subtitle font-thin text-xs underline-light-100 hover:text-blue-dark  transition duration-300'
                     key={item.id}
                     href={item.link}
                   >
@@ -83,7 +83,7 @@ export function ListFooter({ title, items }: ListFooterProps) {
                       E-mail:
                     </span>
                     <Link
-                      className='flex text-base-subtitle font-primary font-thin text-xs hover:underline  transition duration-300'
+                      className='flex text-base-subtitle font-primary font-thin text-xs hover:text-blue-dark  transition duration-300'
                       key={item.id}
                       href={`mailto:${item.name}`}
                     >
@@ -94,11 +94,11 @@ export function ListFooter({ title, items }: ListFooterProps) {
               case 'tel':
                 return (
                   <div className='flex gap-2'>
-                    <span className='text-base-title font-primary font-normal text-sm'>
+                    <span className='text-base-title font-primary font-normal text-xs'>
                       Telefone:
                     </span>
                     <span
-                      className='flex text-base-subtitle font-primary font-thin text-sm'
+                      className='flex text-base-subtitle font-primary font-thin text-xs'
                       key={item.id}
                     >
                       {item.name}

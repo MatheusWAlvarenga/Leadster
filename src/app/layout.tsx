@@ -1,18 +1,12 @@
 // font
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 
 // style
 import 'tailwindcss/tailwind.css'
 
 // components
-import { Header } from '../components/header'
+import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { SecondaryBoard } from '@/components/secondaryBoard'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   subsets: ['latin'],

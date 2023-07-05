@@ -22,7 +22,7 @@ module.exports = {
 
           icon:{
             default: '#F7F8FB',
-            hover: '#ECEDEF',
+            hover: '#1DB0EE',
             text: '#838EAB'
           },
 
@@ -43,7 +43,6 @@ module.exports = {
       },
       fontFamily: {
         primary:['var(--font-plus-jakarta-sans)'] ,
-        secondary:  ['var(--font-inter)']
       },
     
     },

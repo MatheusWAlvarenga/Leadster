@@ -125,7 +125,7 @@ export function Footer() {
           <div className='flex gap-1 font-primary text-base-subtitle text-xs font-thin'>
             Copyright © 2015 - 2022 Todos os direitos reservados |
             <Link
-              className='flex gap-2 font-primary text-blue-dark text-xs font-light hover:underline  transition duration-300'
+              className='flex gap-2 font-primary text-blue-dark text-xs font-light hover:text-blue-light  transition duration-300'
               href='https://leadster.com.br/'
             >
               Leadster
@@ -134,8 +134,8 @@ export function Footer() {
           <div className='flex gap-1 font-primary text-base-subtitle text-xs font-thin'>
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010 -000 |
             <Link
-              className='flex font-primary text-base-subtitle text-xs font-light hover:underline  transition duration-300'
-              href='/term-of-use'
+              className='flex font-primary text-base-subtitle text-xs font-light hover:text-blue-light  transition duration-300'
+              href='https://leadster.com.br/termos_de_uso/'
             >
               Termos de uso
             </Link>
