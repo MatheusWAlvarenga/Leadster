@@ -2,7 +2,6 @@
 // vendors
 import { useEffect, useState } from 'react'
 import 'tailwindcss/tailwind.css'
-import wait from 'waait'
 
 // components
 import { PrimaryBoard } from '@/components/boards/primary'
