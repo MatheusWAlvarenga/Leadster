@@ -1,6 +1,6 @@
 'use client'
 // vendors
-import { CSSProperties, useState } from 'react'
+import { CSSProperties, useEffect, useState } from 'react'
 import Select, { StylesConfig } from 'react-select'
 
 // components
@@ -17,11 +17,21 @@ type ButtonsBarOptionsType = {
   name: string
   selected: boolean
 }
+
+interface ButtonsBarProps {
+  selections: (
+    sortedBy: SelectType,
+    itemType: ButtonsBarOptionsType | undefined,
+  ) => void
+}
+
+//  Select Options
 const options = [
-  { value: 'create_at', label: 'Data de Publicação' },
+  { value: 'created_at', label: 'Data de Publicação' },
   { value: 'title', label: 'Título' },
 ]
 
+// Buttons
 const buttonsBarOptions = [
   {
     id: 1,
@@ -70,7 +80,7 @@ const selectStyle: StylesConfig<SelectType, IsMulti> = {
   },
 }
 
-export function ButtonsBar() {
+export function ButtonsBar({ selections }: ButtonsBarProps) {
   const [selected, setSelected] = useState<SelectType>(options[0])
   const [buttonsBar, setButtonsBar] =
     useState<ButtonsBarOptionsType[]>(buttonsBarOptions)
@@ -95,6 +105,12 @@ export function ButtonsBar() {
     })
     setButtonsBar(newButtonBar)
   }
+
+  useEffect(() => {
+    const buttonSelected = buttonsBar.find((e) => e.selected === true)
+    selections(selected, buttonSelected)
+  }, [selected, buttonsBar])
+
   return (
     <div className='flex   justify-between items-center w-[50%] lg:w-[80%] border-b-2 border-line-dark py-8'>
       <div className='flex w-full gap-2 justify-center items-center'>
