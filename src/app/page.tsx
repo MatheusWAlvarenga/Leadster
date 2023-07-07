@@ -1,6 +1,6 @@
 'use client'
 // vendors
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import 'tailwindcss/tailwind.css'
 
 // components
@@ -8,6 +8,7 @@ import { PrimaryBoard } from '@/components/boards/primary'
 import { SecondBoard } from '@/components/boards/second'
 import { ButtonsBar } from '@/components/buttons/buttonsBar'
 import { Card } from '@/components/card'
+import { Pagination } from '@/components/pagination'
 
 // videos
 import { videoList, VideoListType } from '../../public/videos'
@@ -24,44 +25,39 @@ type ButtonsBarOptionsType = {
   selected: boolean
 }
 
+// context
+import { PaginationContext } from '@/contexts/pagination/videos'
+
 export default function Home() {
+  const {
+    currentPage,
+    controlList,
+    itemsPerPage,
+    handleCurrentPage,
+    totalPages,
+  } = useContext(PaginationContext)
   const [list, setList] = useState<VideoListType[]>([])
-  const [currentPage, setCurrentPage] = useState<number>(1)
-  const [allPage, setAllPage] = useState<number[]>([1])
   const [sortBy, setSortBy] = useState<string>('created_at')
   const [type, setType] = useState<number>(4)
-
-  const itemsPerPage = 9
 
   function handleSelectionFilter(
     sortBy: SelectType,
     buttonSelected: ButtonsBarOptionsType | undefined,
   ) {
-    setCurrentPage(1)
     setSortBy(sortBy.value)
     setType(buttonSelected ? buttonSelected.id : 4)
   }
 
   useEffect(() => {
-    if (list.length) {
-      const total = Array.from(
-        { length: Math.ceil(list.length / itemsPerPage) },
-        (_, i) => i + 1,
-      )
-      setAllPage(total)
-    }
-  }, [list, sortBy, type])
-
-  useEffect(() => {
     let newList = videoList()
 
-    let test: VideoListType[] = []
+    let newListVideos: VideoListType[] = []
 
     newList.map((item) => {
-      if (item.type === type) test.push(item)
+      if (item.type === type) newListVideos.push(item)
     })
 
-    let listSorted = test.sort((a, b) => {
+    let listSorted = newListVideos.sort((a, b) => {
       if (sortBy == 'created_at') {
         const sortA = a.createdAt.getTime()
         const sortB = b.createdAt.getTime()
@@ -71,18 +67,10 @@ export default function Home() {
 
       return a.type - b.type
     })
-
+    handleCurrentPage(1)
+    controlList(listSorted.length)
     setList(listSorted)
   }, [sortBy, type])
-
-  async function handleCurrentPage(page: number) {
-    setCurrentPage(page)
-
-    window.scrollTo({
-      top: 750,
-      behavior: 'smooth',
-    })
-  }
 
   return (
     <div className='flex w-full flex-col justify-start items-center'>
@@ -94,7 +82,6 @@ export default function Home() {
             handleSelectionFilter(sortBy, buttonSelected)
           }
         />
-
         {/* grid */}
         <div className='flex w-full px-4 phone:px-0 phone:w-[90%] tablet:w-[80%]  monitor:w-[50%] flex-col py-12 gap-6 '>
           <div
@@ -136,69 +123,13 @@ export default function Home() {
 
           {/*  pagination */}
           {list.length > 0 && (
-            <div
-              className='flex justify-center items-center font-primary font-normal text-base-title gap-2'
-              id='pagination'
-            >
-              <span className='hidden desktop:flex text-base-title font-primary font-normal'>
-                Página
-              </span>
-              {allPage.length > 7 && currentPage > 4 && (
-                <button
-                  onClick={() => handleCurrentPage(1)}
-                  type='button'
-                  className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
-                >
-                  ...
-                </button>
-              )}
-              {allPage.length <= 6 &&
-                allPage.map((page) => {
-                  return (
-                    <button
-                      key={page}
-                      onClick={() => handleCurrentPage(page)}
-                      type='button'
-                      className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
-                        page == currentPage
-                          ? 'text-blue-dark border border-blue-dark rounded-md'
-                          : 'text-base-title hover:text-blue-dark'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  )
-                })}
-              {allPage.length > 6 &&
-                allPage.map((page) => {
-                  if (page >= currentPage - 3 && page <= currentPage + 3)
-                    return (
-                      <button
-                        key={page}
-                        onClick={() => handleCurrentPage(page)}
-                        type='button'
-                        className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
-                          page == currentPage
-                            ? 'text-blue-dark border border-blue-dark rounded-md'
-                            : 'text-base-title hover:text-blue-dark'
-                        }`}
-                      >
-                        {page}
-                      </button>
-                    )
-                })}
-              {allPage.length > 7 && currentPage <= allPage.length - 4 && (
-                <button
-                  onClick={() => handleCurrentPage(allPage.length)}
-                  type='button'
-                  className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
-                >
-                  ...
-                </button>
-              )}
-            </div>
+            <Pagination
+              totalPages={totalPages}
+              handleCurrentPage={handleCurrentPage}
+              currentPage={currentPage}
+            />
           )}
-        </div>
+        </div>{' '}
       </div>
 
       <SecondBoard />

@@ -1,6 +1,5 @@
 // vendors
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { CiCreditCardOff } from 'react-icons/ci'
 
 // assets
@@ -12,11 +11,6 @@ import rating from '@/assets/rating.webp'
 import { SecondButton } from '../../buttons/second'
 
 export function SecondBoard() {
-  // const router = useRouter()
-  function handleOnClick() {
-    alert('onClick')
-    // router.push('/demonstration')
-  }
   return (
     <div className='flex justify-center items-center bg-highlight w-full overflow-hidden py-8'>
       <div className='flex flex-col desktop:flex-row justify-center items-center z-10 w-full tablet:w-[80%]  monitor:w-[50%]'>
@@ -76,6 +70,7 @@ export function SecondBoard() {
           </div>
         </div>
       </div>
+      {/* triangle background */}
       <div className='flex absolute justify-start  w-full overflow-hidden '>
         <div className='h-[28rem] w-[28rem] mt-[17rem] -ml-[16rem] desktop:h-[38rem] desktop:w-[38rem]  desktop:-mt-[4rem]  bg-detail bg-opacity-5 rotate-45 transform origin-bottom-left rounded-tl-[48px]' />
       </div>
