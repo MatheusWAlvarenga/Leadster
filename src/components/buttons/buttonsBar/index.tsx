@@ -112,8 +112,8 @@ export function ButtonsBar({ selections }: ButtonsBarProps) {
   }, [selected, buttonsBar])
 
   return (
-    <div className='flex   justify-between items-center w-[50%] lg:w-[80%] border-b-2 border-line-dark py-8'>
-      <div className='flex w-full gap-2 justify-center items-center'>
+    <div className='desktop:flex justify-between items-center w-full px-4 phone:px-0 phone:w-[90%] tablet:w-[80%]  monitor:w-[50%] border-b-2 border-line-dark py-8'>
+      <div className='desktop:flex w-full gap-2 justify-center items-center'>
         {buttonsBar &&
           buttonsBar.map((button) => {
             return (
@@ -126,7 +126,7 @@ export function ButtonsBar({ selections }: ButtonsBarProps) {
             )
           })}
       </div>
-      <div className='flex w-full gap-2 justify-end items-center'>
+      <div className='flex mt-4 desktop:mt-0 w-full gap-2 justify-center desktop:justify-end items-center'>
         <span className='flex items-center font-primary font-normal text-sm'>
           Ordenar por:
         </span>

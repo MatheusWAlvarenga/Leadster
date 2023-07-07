@@ -85,10 +85,10 @@ export default function Home() {
   }
 
   return (
-    <div className='flex flex-col justify-start items-center'>
+    <div className='flex w-full flex-col justify-start items-center'>
       <PrimaryBoard />
 
-      <div className='flex flex-col justify-center items-center w-full py-20'>
+      <div className='flex flex-col justify-center items-center w-full py-4 desktop:py-20'>
         <ButtonsBar
           selections={(sortBy, buttonSelected) =>
             handleSelectionFilter(sortBy, buttonSelected)
@@ -96,12 +96,21 @@ export default function Home() {
         />
 
         {/* grid */}
-        <div className='flex w-[80%] flex-col py-12 gap-6 '>
+        <div className='flex w-full px-4 phone:px-0 phone:w-[90%] tablet:w-[80%]  monitor:w-[50%] flex-col py-12 gap-6 '>
           <div
             id='point'
-            className='w-full grid grid-cols-3 gap-8 border-b-2 border-line-dark pb-16'
+            className={`w-full ${
+              list.length
+                ? 'flex flex-col desktop:grid grid-cols-3'
+                : 'flex justify-center items-center'
+            } gap-8 border-b-2 border-line-dark pb-16`}
           >
-            {list.length &&
+            {!list.length && (
+              <h2 className='text-lg font-primary font-semibold text-blue-light'>
+                Nenhum vídeo encontrado
+              </h2>
+            )}
+            {list.length > 0 &&
               list.map((card, index) => {
                 if (currentPage === 1 && index >= 0 && index < itemsPerPage)
                   return (
@@ -126,42 +135,25 @@ export default function Home() {
           </div>
 
           {/*  pagination */}
-          <div
-            className='flex justify-center items-center font-primary font-normal text-base-title gap-2'
-            id='pagination'
-          >
-            <span className='text-base-title font-primary font-normal'>
-              Página
-            </span>
-            {allPage.length > 7 && currentPage > 4 && (
-              <button
-                onClick={() => handleCurrentPage(1)}
-                type='button'
-                className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
-              >
-                ...
-              </button>
-            )}
-            {allPage.length <= 6 &&
-              allPage.map((page) => {
-                return (
-                  <button
-                    key={page}
-                    onClick={() => handleCurrentPage(page)}
-                    type='button'
-                    className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
-                      page == currentPage
-                        ? 'text-blue-dark border border-blue-dark rounded-md'
-                        : 'text-base-title hover:text-blue-dark'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                )
-              })}
-            {allPage.length > 6 &&
-              allPage.map((page) => {
-                if (page >= currentPage - 3 && page <= currentPage + 3)
+          {list.length > 0 && (
+            <div
+              className='flex justify-center items-center font-primary font-normal text-base-title gap-2'
+              id='pagination'
+            >
+              <span className='hidden desktop:flex text-base-title font-primary font-normal'>
+                Página
+              </span>
+              {allPage.length > 7 && currentPage > 4 && (
+                <button
+                  onClick={() => handleCurrentPage(1)}
+                  type='button'
+                  className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
+                >
+                  ...
+                </button>
+              )}
+              {allPage.length <= 6 &&
+                allPage.map((page) => {
                   return (
                     <button
                       key={page}
@@ -176,17 +168,36 @@ export default function Home() {
                       {page}
                     </button>
                   )
-              })}
-            {allPage.length > 7 && currentPage <= allPage.length - 4 && (
-              <button
-                onClick={() => handleCurrentPage(allPage.length)}
-                type='button'
-                className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
-              >
-                ...
-              </button>
-            )}
-          </div>
+                })}
+              {allPage.length > 6 &&
+                allPage.map((page) => {
+                  if (page >= currentPage - 3 && page <= currentPage + 3)
+                    return (
+                      <button
+                        key={page}
+                        onClick={() => handleCurrentPage(page)}
+                        type='button'
+                        className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
+                          page == currentPage
+                            ? 'text-blue-dark border border-blue-dark rounded-md'
+                            : 'text-base-title hover:text-blue-dark'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    )
+                })}
+              {allPage.length > 7 && currentPage <= allPage.length - 4 && (
+                <button
+                  onClick={() => handleCurrentPage(allPage.length)}
+                  type='button'
+                  className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
+                >
+                  ...
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

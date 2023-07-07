@@ -44,6 +44,14 @@ module.exports = {
       fontFamily: {
         primary:['var(--font-plus-jakarta-sans)'] ,
       },
+
+      screens: {
+        'phone': '480px',         // For phones and smaller devices
+        'tablet': '820px',        // For tablets and larger phones
+        'desktop': '1024px',      // For desktops and larger tablets
+        'monitor': '2440px',      // For large desktops and monitors
+      },
+    
     
     },
   },

@@ -14,7 +14,7 @@ export function PrimaryButton({
     <button
       type='button'
       onClick={onClick}
-      className={`flex w-full min-w-[10rem] justify-center items-center text-sm rounded-full font-semibold font-primary py-2  border transition duration-100 hover:text-blue-dark ${
+      className={`flex mt-4 desktop:mt-0 w-full min-w-[10rem] justify-center items-center text-sm rounded-full font-semibold font-primary py-2  border transition duration-100 hover:text-blue-dark ${
         !selected
           ? 'bg-white text-base-title border-base-title hover:border-blue-dark '
           : 'bg-blue-dark text-white  hover:bg-white  border-blue-dark '

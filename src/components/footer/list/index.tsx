@@ -18,11 +18,11 @@ type ItemsType = {
 
 export function ListFooter({ title, items }: ListFooterProps) {
   return (
-    <div className='flex flex-col gap-8'>
-      <h2 className='flex text-base-title font-primary font-semibold text-sm'>
+    <div className='flex w-full flex-col gap-2 desktop:gap-8 mb-8 desktop:mb-0 items-center desktop:items-center'>
+      <h2 className='flex w-full justify-center desktop:justify-start text-base-title text-center desktop:text-start font-primary font-semibold text-sm'>
         {title}
       </h2>
-      <div className='flex flex-col gap-6'>
+      <div className='flex w-full flex-col items-center desktop:items-start gap-4 mt-2 desktop:mt-0 desktop:gap-8 '>
         {items.length &&
           items.map((item) => {
             switch (item.type) {
