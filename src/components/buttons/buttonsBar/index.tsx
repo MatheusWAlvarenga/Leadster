@@ -109,7 +109,7 @@ export function ButtonsBar({ selections }: ButtonsBarProps) {
   useEffect(() => {
     const buttonSelected = buttonsBar.find((e) => e.selected === true)
     selections(selected, buttonSelected)
-  }, [selected, buttonsBar])
+  }, [selected, buttonsBar, selections])
 
   return (
     <div className='desktop:flex justify-between items-center w-full px-4 phone:px-0 phone:w-[90%] tablet:w-[80%]  monitor:w-[50%] border-b-2 border-line-dark py-8'>

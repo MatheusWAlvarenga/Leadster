@@ -1,8 +1,10 @@
+import { BlockLike } from 'typescript'
+
 // types
 interface PaginationProps {
   totalPages: number[]
   currentPage: number
-  handleCurrentPage: (item: number) => void
+  handleCurrentPage: (item: number, scroll: boolean) => void
 }
 
 export function Pagination({
@@ -20,7 +22,7 @@ export function Pagination({
       </span>
       {totalPages.length > 7 && currentPage > 4 && (
         <button
-          onClick={() => handleCurrentPage(1)}
+          onClick={() => handleCurrentPage(1, true)}
           type='button'
           className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
         >
@@ -32,7 +34,7 @@ export function Pagination({
           return (
             <button
               key={page}
-              onClick={() => handleCurrentPage(page)}
+              onClick={() => handleCurrentPage(page, true)}
               type='button'
               className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
                 page == currentPage
@@ -50,7 +52,7 @@ export function Pagination({
             return (
               <button
                 key={page}
-                onClick={() => handleCurrentPage(page)}
+                onClick={() => handleCurrentPage(page, true)}
                 type='button'
                 className={`flex justify-center items-center font-primary font-normal py-1 px-3 ${
                   page == currentPage
@@ -64,7 +66,7 @@ export function Pagination({
         })}
       {totalPages.length > 7 && currentPage <= totalPages.length - 4 && (
         <button
-          onClick={() => handleCurrentPage(totalPages.length)}
+          onClick={() => handleCurrentPage(totalPages.length, true)}
           type='button'
           className='flex justify-center items-center font-primary font-normal py-1 px-3 text-base-title hover:text-blue-dark'
         >

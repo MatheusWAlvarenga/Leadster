@@ -7,7 +7,7 @@ interface ContextType {
   totalItems: number
   itemsPerPage: number
   currentPage: number
-  handleCurrentPage: (item: number) => void
+  handleCurrentPage: (item: number, scroll?: boolean) => void
   controlList: (item: number) => void
 }
 
@@ -30,12 +30,13 @@ export function PaginationVideosSelect({ children }: { children: ReactNode }) {
     }
   }, [totalItems])
 
-  function handleCurrentPage(page: number) {
+  function handleCurrentPage(page: number, scroll: boolean = false) {
     setCurrentPage(page)
-    window.scrollTo({
-      top: 750,
-      behavior: 'smooth',
-    })
+    if (scroll)
+      window.scrollTo({
+        top: 750,
+        behavior: 'smooth',
+      })
   }
 
   function controlList(item: number) {

@@ -7,14 +7,14 @@ import headerLogo from '@/assets/header-logo.svg'
 export function PrimaryBoard() {
   return (
     <div className='flex flex-col justify-center items-center bg-highlight py-[5rem] desktop:py-[10rem]  w-full'>
-      <div className='flex border-2 font-primary border-blue-dark rounded-[50px] py-2 px-5 rounded-bl-[4px] uppercase text-blue-dark font-semibold text-sm desktop:text-medium '>
+      <div className='flex justify-center items-center border-2 mb-2 font-primary border-blue-dark rounded-[50px] py-1 px-6 rounded-bl-[4px] uppercase text-blue-dark font-semibold text-[.65rem] desktop:text-[.75rem] '>
         webnars exclusivos
       </div>
-      <div className='flex text-[2rem] desktop:text-[3rem] font-primary text-base-title'>
+      <div className='flex text-[1.25rem] desktop:text-[2.25rem] font-primary text-base-title'>
         Menos Conversinha,
       </div>
-      <div className='flex -mt-[.85rem] desktop:-mt-[1.5rem] font-primary justify-center items-center'>
-        <span className='flex text-[3rem] desktop:text-[5.5rem] text-blue-dark'>
+      <div className='flex -mt-[.35rem] desktop:-mt-[1rem] font-primary font-semibold justify-center items-center'>
+        <span className='flex text-[2.25rem] desktop:text-[4.25rem] text-blue-dark'>
           Mais Conversão
         </span>
         <Image
@@ -23,10 +23,10 @@ export function PrimaryBoard() {
           alt=''
         />
       </div>
-      <div className='border-b border-line-dark w-[90%] desktop:w-[44rem]' />
-      <span className='text-center desktop:text-start text-[.875rem] desktop:text-[1.125rem] font-primary mt-[1rem] w-[90%] desktop:w-auto'>
+      <div className='border-b border-line-dark w-[90%] desktop:w-[35rem]' />
+      <span className='text-center desktop:text-start text-[.75rem] desktop:text-[.875rem] font-primary mt-[1rem]  desktop:w-auto'>
         Conheça as estratégias que{' '}
-        <span className='text-base-title font-primary text-[.875rem] desktop:text-[1.125rem] font-semibold'>
+        <span className='text-base-title font-primary text-[.75rem] desktop:text-[.875rem] font-semibold'>
           mudaram o jogo
         </span>{' '}
         e como aplicá-las no seu negócio

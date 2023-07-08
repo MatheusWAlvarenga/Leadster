@@ -38,7 +38,34 @@ module.exports = {
         yellow: '#FFC400',
         
         btn: {
-          border: '#718591'
+          gray: {
+            title: '#77848C',
+            primary: '#D0DEE7',
+            second: '#E8EEF3'
+          },
+          yellow: {
+            title: '#B8A136',
+            primary: '#FFF1A0',
+            second: '#FFF8D0'
+          },
+          blue: {
+            title: '#0087EF',
+            primary: '#A1D9FF',
+            second: '#C2E6FF'
+          },
+          green: {
+            title: '#00B58A',
+            primary: '#9FEFDF',
+            second: '#C2F4EA'
+          },
+        },
+
+        video: {
+          background: '#2D2D2D',
+          slider: '#FF5549',
+          icon: {
+            background: '#737373'
+          }
         }
       },
       fontFamily: {
@@ -48,7 +75,7 @@ module.exports = {
       screens: {
         'phone': '480px',         // For phones and smaller devices
         'tablet': '820px',        // For tablets and larger phones
-        'desktop': '1024px',      // For desktops and larger tablets
+        'desktop': '1124px',      // For desktops and larger tablets
         'monitor': '2440px',      // For large desktops and monitors
       },
     

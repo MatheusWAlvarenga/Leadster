@@ -1,7 +1,9 @@
 // type
 export type VideoListType = {
   id: number
-  name: string
+  event: string
+  title: string
+  file: string
   description: string
   thumbnail: string
   type: number
@@ -29,8 +31,10 @@ export function videoList() {
 
     const video = {
       id,
-      name: 'marketing.mpeg',
-      description: `Texto exemplo. tipo: ${
+      event: 'Webinar',
+      title: 'Como aumentar sua Geração de Leads feat. Traktor',
+      file: 'marketing.mpeg',
+      description: `Lorem ipsum dolor sit amet, consectetur adiping elit. Morbi eu cursus massa. Etiam efficitur est at dolor et sollicitudin ullamcorper at et enim. Suspendisse eleifend metus ultrices iaculis aliquam. Informações do vídeo. tipo: ${
         buttonsBarOptions.find((e) => e.id === type)?.name
       } Create_at: ${('00' + createdAt.getDate()).slice(-2)}-${(
         '00' +

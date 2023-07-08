@@ -7,9 +7,11 @@ import 'tailwindcss/tailwind.css'
 // components
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { PlayerModal } from '@/components/modal/player'
 
 //context
 import { PaginationVideosSelect } from '@/contexts/pagination/videos'
+import { PlayerViewControlContext } from '@/contexts/player'
 
 // fonts
 const plus_jakarta_sans = Plus_Jakarta_Sans({
@@ -30,15 +32,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <PaginationVideosSelect>
-        <body className={`${plus_jakarta_sans.variable} flex flex-col flex-1`}>
-          <div className='flex flex-col gap-2'>
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </body>
-      </PaginationVideosSelect>
+      <PlayerViewControlContext>
+        <PaginationVideosSelect>
+          <body
+            className={`${plus_jakarta_sans.variable} flex flex-col w-full`}
+          >
+            <div className='flex flex-col gap-2'>
+              <Header />
+              {children}
+              <Footer />
+            </div>
+            <PlayerModal />
+          </body>
+        </PaginationVideosSelect>
+      </PlayerViewControlContext>
     </html>
   )
 }
