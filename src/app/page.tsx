@@ -41,7 +41,7 @@ export default function Home() {
     handleCurrentPage,
     totalPages,
   } = useContext(PaginationContext)
-  const { playerOn } = useContext(PlayerContext)
+  const { playerState } = useContext(PlayerContext)
 
   function handleSelectionFilter(
     sortBy: SelectType,
@@ -76,7 +76,13 @@ export default function Home() {
   }, [sortBy, type])
 
   return (
-    <div className='flex w-full  justify-center items-center  flex-col py-12 gap-6 '>
+    <div
+      className={`flex w-full  justify-center items-center  flex-col pb-12 gap-6 ${
+        playerState.fullScreen || playerState.maxScreen
+          ? '[&::-webkit-scrollbar]:display-none'
+          : ''
+      }`}
+    >
       <div className='flex w-full flex-col justify-center items-center '>
         <PrimaryBoard />
 

@@ -1,3 +1,4 @@
+import PagesManifestPlugin from 'next/dist/build/webpack/plugins/pages-manifest-plugin'
 import { BlockLike } from 'typescript'
 
 // types

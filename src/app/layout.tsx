@@ -21,7 +21,7 @@ const plus_jakarta_sans = Plus_Jakarta_Sans({
 
 // metadata
 export const metadata = {
-  title: 'Leadster - Videos',
+  title: 'Leadster',
   description: 'Leadster - Front-end Test',
 }
 

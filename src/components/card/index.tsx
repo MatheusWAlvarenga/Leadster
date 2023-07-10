@@ -43,7 +43,7 @@ export function Card({ props }: CardProps) {
       <div
         className={`${
           hoverControl === true ? ' opacity-100 z-10 ' : 'opacity-0 z-0'
-        } flex absolute w-[22.5rem] h-[12.875rem]  transition duration-500`}
+        } flex absolute w-[22.5rem] h-[12.875rem]  transition duration-300`}
       >
         <div className='flex flex-1 h-full justify-center items-center bg-opacity-30 bg-blue-standard rounded-t-lg'>
           <FaPlay

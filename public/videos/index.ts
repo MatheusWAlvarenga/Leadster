@@ -10,6 +10,7 @@ export type VideoListType = {
   createdAt: Date
 }
 
+// create random videos list
 export function videoList() {
   const getRandomNumber = (min: number, max: number) =>
     Math.floor(Math.random() * (max - min + 1)) + min
@@ -33,7 +34,7 @@ export function videoList() {
       id,
       event: 'Webinar',
       title: 'Como aumentar sua Geração de Leads feat. Traktor',
-      file: 'marketing.mpeg',
+      file: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
       description: `Lorem ipsum dolor sit amet, consectetur adiping elit. Morbi eu cursus massa. Etiam efficitur est at dolor et sollicitudin ullamcorper at et enim. Suspendisse eleifend metus ultrices iaculis aliquam. Informações do vídeo. tipo: ${
         buttonsBarOptions.find((e) => e.id === type)?.name
       } Create_at: ${('00' + createdAt.getDate()).slice(-2)}-${(

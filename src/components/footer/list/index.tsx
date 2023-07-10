@@ -38,10 +38,9 @@ export function ListFooter({ title, items }: ListFooterProps) {
 
               case 'socialMedia':
                 return (
-                  <div className='flex gap-4'>
+                  <div key={item.id} className='flex gap-4'>
                     <Link
                       className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
-                      key={item.id}
                       href='https://www.linkedin.com/company/getleadster/'
                       target='_blank'
                     >
@@ -49,7 +48,6 @@ export function ListFooter({ title, items }: ListFooterProps) {
                     </Link>
                     <Link
                       className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
-                      key={item.id}
                       href='https://www.facebook.com/leadsterplatform/'
                       target='_blank'
                     >
@@ -57,7 +55,6 @@ export function ListFooter({ title, items }: ListFooterProps) {
                     </Link>
                     <Link
                       className='flex text-base-icon-text font-thin text-[1rem] bg-base-icon-default rounded-full p-1 hover:bg-base-icon-hover hover:text-white transition duration-200'
-                      key={item.id}
                       href='https://www.instagram.com/leadster.com.br/'
                       target='_blank'
                     >
