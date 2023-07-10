@@ -10,14 +10,14 @@ type playerStateType = {
   currentTime: number
   playbackRate: number
   menuView: boolean
-  fullScreen: boolean
-  maxScreen: boolean
   loading: boolean
 }
 
 interface ContextType {
   playerOn: boolean
   hoverVideo: boolean
+  fullScreen: boolean
+  maxScreen: boolean
   videoInfo: VideoListType | null
   playerState: playerStateType
   playerField: any
@@ -44,6 +44,8 @@ export function PlayerViewControlContext({
   const playerField = useRef<any>(null)
   const [playerOn, setPlayerOn] = useState<boolean>(false)
   const [hoverVideo, setHoverVideo] = useState<boolean>(false)
+  const [fullScreen, setFullScreen] = useState<boolean>(false)
+  const [maxScreen, setMaxScreen] = useState<boolean>(false)
   const [videoInfo, setVideoInfo] = useState<VideoListType | null>(null)
   const [playerState, setPlayerState] = useState({
     playing: false,
@@ -51,8 +53,6 @@ export function PlayerViewControlContext({
     playbackRate: 1,
     menuView: false,
     hover: false,
-    fullScreen: false,
-    maxScreen: false,
     loading: false,
   })
 
@@ -67,9 +67,10 @@ export function PlayerViewControlContext({
         currentTime: 0,
         playbackRate: 1,
         menuView: false,
-        fullScreen: false,
-        maxScreen: false,
       })
+
+      setFullScreen(false)
+      setMaxScreen(false)
       playerField.current.currentTime = 0
       playerField.current.playbackRate = 1
       playerField.current.pause()
@@ -190,21 +191,23 @@ export function PlayerViewControlContext({
   }
 
   function handleFullScreen() {
-    const newState = playerState.fullScreen
+    const newState = fullScreen
+
+    setFullScreen(!newState)
+    setMaxScreen(false)
     setPlayerState({
       ...playerState,
-      maxScreen: false,
       menuView: false,
-      fullScreen: !newState,
     })
   }
   function handleMaxScreen() {
-    const newState = playerState.maxScreen
+    const newState = maxScreen
+    setMaxScreen(!newState)
+    setFullScreen(false)
     setPlayerState({
       ...playerState,
-      fullScreen: false,
+
       menuView: false,
-      maxScreen: !newState,
     })
   }
 
@@ -212,6 +215,8 @@ export function PlayerViewControlContext({
     <PlayerContext.Provider
       value={{
         playerField,
+        fullScreen,
+        maxScreen,
         playerOn,
         hoverVideo,
         videoInfo,

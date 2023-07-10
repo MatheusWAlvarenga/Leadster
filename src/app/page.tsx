@@ -41,7 +41,7 @@ export default function Home() {
     handleCurrentPage,
     totalPages,
   } = useContext(PaginationContext)
-  const { playerState } = useContext(PlayerContext)
+  const { fullScreen, maxScreen } = useContext(PlayerContext)
 
   function handleSelectionFilter(
     sortBy: SelectType,
@@ -78,9 +78,7 @@ export default function Home() {
   return (
     <div
       className={`flex w-full  justify-center items-center  flex-col pb-12 gap-6 ${
-        playerState.fullScreen || playerState.maxScreen
-          ? '[&::-webkit-scrollbar]:display-none'
-          : ''
+        fullScreen || maxScreen ? '[&::-webkit-scrollbar]:overflow-none' : ''
       }`}
     >
       <div className='flex w-full flex-col justify-center items-center '>

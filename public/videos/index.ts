@@ -10,7 +10,7 @@ export type VideoListType = {
   createdAt: Date
 }
 
-// create random videos list
+// create random videos list test
 export function videoList() {
   const getRandomNumber = (min: number, max: number) =>
     Math.floor(Math.random() * (max - min + 1)) + min
@@ -33,7 +33,7 @@ export function videoList() {
     const video = {
       id,
       event: 'Webinar',
-      title: 'Como aumentar sua Geração de Leads feat. Traktor',
+      title: generateRandomText(),
       file: 'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4',
       description: `Lorem ipsum dolor sit amet, consectetur adiping elit. Morbi eu cursus massa. Etiam efficitur est at dolor et sollicitudin ullamcorper at et enim. Suspendisse eleifend metus ultrices iaculis aliquam. Informações do vídeo. tipo: ${
         buttonsBarOptions.find((e) => e.id === type)?.name
@@ -80,229 +80,18 @@ const buttonsBarOptions = [
   },
 ]
 
-// export const videoList: VideoListType[] = [
-//   {
-//     id: 1,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 2,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-01 00:02:02'),
-//   },
-//   {
-//     id: 3,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:03'),
-//   },
-//   {
-//     id: 4,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:04'),
-//   },
-//   {
-//     id: 5,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 6,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 7,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:05'),
-//   },
-//   {
-//     id: 8,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 3,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 9,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:07'),
-//   },
-//   {
-//     id: 10,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 11,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 12,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:09'),
-//   },
-//   {
-//     id: 13,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 14,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 15,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 16,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:10'),
-//   },
-//   {
-//     id: 17,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:03:01'),
-//   },
-//   {
-//     id: 18,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 4,
-//     createdAt: new Date('2023-01-01 00:02:11'),
-//   },
-//   {
-//     id: 19,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 20,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 2,
-//     createdAt: new Date('2023-01-01 01:02:01'),
-//   },
-//   {
-//     id: 21,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-04 00:02:01'),
-//   },
-//   {
-//     id: 22,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-02 00:02:01'),
-//   },
-//   {
-//     id: 23,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 1,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 24,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 5,
-//     createdAt: new Date('2023-01-04 20:02:01'),
-//   },
-//   {
-//     id: 25,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 5,
-//     createdAt: new Date('2023-01-01 21:02:01'),
-//   },
-//   {
-//     id: 26,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 5,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 27,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 5,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-//   {
-//     id: 28,
-//     name: 'marketing.mpeg',
-//     description: 'Como aumentar sua Geração de Leads feat. Traktor',
-//     thumbnail: 'marketing.png',
-//     type: 5,
-//     createdAt: new Date('2023-01-01 00:02:01'),
-//   },
-// ]
+function generateRandomText() {
+  const loremText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique elit id vestibulum condimentum. Phasellus et malesuada odio.'
+  const minLength = 30
+  const maxLength = 45
+  const textLength =
+    Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength
+  let randomText = ''
+
+  while (randomText.length < textLength) {
+    randomText += loremText
+  }
+
+  return randomText.substring(0, textLength)
+}

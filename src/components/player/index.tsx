@@ -14,12 +14,8 @@ import { MdOutlineRectangle } from 'react-icons/md'
 // context
 import { PlayerContext } from '@/contexts/player'
 
-// components
-import { Loading } from '../loading'
-
 export function Player() {
   const {
-    watchHoverVideo,
     playerField,
     sliderController,
     handlePlay,
@@ -32,14 +28,12 @@ export function Player() {
     handleMaxScreen,
     videoInfo,
     hoverVideo,
+    fullScreen,
+    maxScreen,
   } = useContext(PlayerContext)
 
   return (
-    <div
-      className='flex bg-video-background justify-center items-center h-full w-full'
-      onMouseEnter={() => watchHoverVideo(true)}
-      onMouseLeave={() => watchHoverVideo(false)}
-    >
+    <div className='flex bg-video-background justify-center items-center h-full w-full'>
       {videoInfo?.file && (
         <video
           className={`${!playerState.loading ? 'flex' : 'hidden'}`}
@@ -49,7 +43,6 @@ export function Player() {
           controls={false}
           onTimeUpdate={sliderController}
           onClick={handlePlay}
-          poster={`../../../public/thumbnail/${videoInfo.thumbnail}`}
         >
           <source src={videoInfo.file} type='video/mp4' />
         </video>
@@ -74,7 +67,7 @@ export function Player() {
       {(playerState.playing || hoverVideo) && !playerState.loading && (
         <div
           className={`flex flex-col fixed ${
-            playerState.fullScreen || playerState.maxScreen
+            fullScreen || maxScreen
               ? 'bottom-5 border border-white rounded-lg p-4 bg-white bg-opacity-30 border-opacity-30'
               : 'mt-[13.2rem]'
           }   w-[24rem] desktop:w-[28rem] px-2 gap-2 ${
@@ -162,9 +155,7 @@ export function Player() {
 
             <input
               className={`w-full ${
-                playerState.fullScreen || playerState.maxScreen
-                  ? 'mt-7'
-                  : 'mt-0'
+                fullScreen || maxScreen ? 'mt-7' : 'mt-0'
               } desktop:mt-0 appearance-none [&::-webkit-slider-runnable-track]:rounded-none [&::-webkit-slider-runnable-track]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-none [&::-webkit-slider-thumb]:h-[2px] [&::-webkit-slider-thumb]:w-[1px] [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:bg-transparent `}
               type='range'
               min='0'
@@ -180,7 +171,7 @@ export function Player() {
           {/* buttons   */}
           <div
             className={`flex ${
-              playerState.fullScreen || playerState.maxScreen ? 'mt-0' : '-mt-6'
+              fullScreen || maxScreen ? 'mt-0' : '-mt-6'
             } desktop:mt-0 justify-between items-center px-2`}
           >
             <div className='flex gap-6 text-white'>
@@ -232,7 +223,7 @@ export function Player() {
                 className='w-full h-full'
                 type='button'
               >
-                {playerState.fullScreen ? (
+                {fullScreen ? (
                   <BiExitFullscreen className='w-5 h-5' />
                 ) : (
                   <BiFullscreen className='w-5 h-5' />
@@ -244,8 +235,8 @@ export function Player() {
       )}
 
       <div>
-        <span> {playerState.fullScreen} </span>
-        <span>{playerState.maxScreen}</span>
+        <span> {fullScreen} </span>
+        <span>{maxScreen}</span>
       </div>
     </div>
   )
