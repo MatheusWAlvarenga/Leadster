@@ -1,10 +1,12 @@
-<h1 align="center">Projeto de Listagem de Vídeos da Leadster</h1>
+<h1 align="center">Listagem de Vídeos da Leadster</h1>
 
- <div align="center">
-   <img width="500" alt="" src="">
+ <div align="center"">
+   <img width="500" alt="" src="https://github.com/MatheusWAlvarenga/Leadster-Frontend/assets/94935750/9e14cecd-3406-4d06-a156-f9ee0a9dad34">
+
 </div>
-
-Bem-vindo(a) ao projeto de frontend proposto pela Leadster! Este projeto consiste em uma landing page responsiva desenvolvida com o framework Next.js, utilizando TypeScript. O objetivo é exibir uma lista de vídeos e permitir a reprodução dos mesmos em um modal. A listagem de vídeos é configurada através de um arquivo JSON, permitindo uma fácil modificação das URLs dos vídeos.
+</br>
+ <div align="center"">
+Bem-vindo(a) ao projeto de frontend proposto pela Leadster! Este projeto consiste em uma landing page responsiva desenvolvida com o framework Next.js, utilizando TypeScript. O objetivo é exibir uma lista de vídeos e permitir a reprodução dos mesmos em um modal. A listagem de vídeos é configurada através de um arquivo JSON, permitindo uma fácil modificação das URLs dos vídeos.</div>
 
 ## Requisitos
 
@@ -14,24 +16,6 @@ Bem-vindo(a) ao projeto de frontend proposto pela Leadster! Este projeto consist
 - Utilização de HTML5 escrito de maneira semântica.
 - Implementação de padrões e código simples e autoexplicativo.
 - Garantir que o layout seja responsivo e se adapte a diferentes dispositivos.
-
-## Sugestão de melhoria no projeto
-
-Utilizar o Tailwind CSS no projeto traz várias vantagens significativas:
-
-- Produtividade aprimorada: O Tailwind CSS é uma ferramenta que agiliza o desenvolvimento, pois os estilos podem ser aplicados rapidamente com apenas algumas classes.
-
-- Flexibilidade e personalização: O Tailwind CSS permite uma alta flexibilidade e personalização. Com suas classes utilitárias, é possível criar estilos únicos para cada elemento da página de maneira fácil e rápida. Além disso, o Tailwind fornece uma abordagem de configuração, permitindo que você personalize as classes, crie temas personalizados e defina suas próprias variações de estilo.
-
-- Design consistente: O Tailwind CSS segue uma abordagem consistente de design, fornecendo um conjunto coeso de classes utilitárias. Isso garante que o estilo aplicado em diferentes partes da página seja consistente, resultando em uma experiência visual uniforme. Além disso, o Tailwind facilita a manutenção do código, pois a lógica de estilo está centralizada nas classes utilitárias, tornando mais fácil fazer alterações ou atualizações.
-
-- Tamanho do arquivo reduzido: Uma das vantagens do Tailwind CSS é a sua abordagem de construção de estilos sob demanda. Isso significa que apenas as classes utilizadas no projeto são incluídas no arquivo final CSS. Isso resulta em um tamanho de arquivo CSS reduzido em comparação com outros frameworks de estilização, o que leva a tempos de carregamento mais rápidos para os usuários.
-
-- Compatibilidade com outros frameworks: O Tailwind CSS é altamente compatível com outros frameworks e bibliotecas, como o Next.js utilizado neste projeto. Ele pode ser facilmente integrado a projetos existentes, permitindo a criação de componentes personalizados e estilização flexível em conjunto com outros recursos e funcionalidades do framework.
-
-- Responsividade simplificada: O Tailwind CSS possui classes responsivas embutidas que facilitam a criação de layouts responsivos. Com o uso dessas classes, é possível definir estilos específicos para diferentes tamanhos de tela, tornando a página adaptável a dispositivos móveis e proporcionando uma experiência consistente em diferentes dispositivos.
-
-No geral, o uso do Tailwind CSS oferece uma abordagem rápida, flexível e consistente para a estilização de projetos frontend, resultando em maior produtividade e um código mais limpo e organizado.
 
 ## Tecnologias Utilizadas
 
@@ -81,10 +65,6 @@ No geral, o uso do Tailwind CSS oferece uma abordagem rápida, flexível e consi
 ## Figma
 
 - [Acesse a reconstrução do projeto no Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
-
-## Contribuição
-
-Este projeto foi desenvolvido para apresentação na Leadster como um teste de frontend. Portanto, não é permitido contribuições externas no momento. No entanto, agradeço o seu interesse.
 
 ##
 
