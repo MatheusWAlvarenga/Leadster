@@ -26,7 +26,7 @@ type ButtonsBarOptionsType = {
 }
 
 // context
-import { PaginationContext } from '@/contexts/pagination/videos'
+import { PaginationContext } from '@/contexts/pagination'
 import { PlayerContext } from '@/contexts/player'
 
 export default function Home() {

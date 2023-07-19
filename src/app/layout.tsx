@@ -10,7 +10,7 @@ import { Footer } from '@/components/footer'
 import { PlayerModal } from '@/components/modal/player'
 
 //context
-import { PaginationVideosSelect } from '@/contexts/pagination/videos'
+import { PaginationVideosSelect } from '@/contexts/pagination'
 import { PlayerViewControlContext } from '@/contexts/player'
 
 // fonts
