@@ -65,7 +65,7 @@ This project consists of a responsive landing page developed with the Next.js fr
 
 ## Figma
 
-- [Access the project reconstruction on Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
+- [Access the project on Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
 
 ##
 
