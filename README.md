@@ -6,7 +6,8 @@
 </div>
 </br>
  <div align="center"">
-Bem-vindo(a) ao projeto de frontend proposto pela Leadster! Este projeto consiste em uma landing page responsiva desenvolvida com o framework Next.js, utilizando TypeScript. O objetivo é exibir uma lista de vídeos e permitir a reprodução dos mesmos em um modal. A listagem de vídeos é configurada através de um arquivo JSON, permitindo uma fácil modificação das URLs dos vídeos.</div>
+
+Este projeto consiste em uma landing page responsiva desenvolvida com o framework Next.js, utilizando TypeScript. O objetivo é exibir uma lista de vídeos e permitir a reprodução dos mesmos em um modal. A listagem de vídeos é configurada através de um arquivo JSON, permitindo uma fácil modificação das URLs dos vídeos.</div>
 
 ## Requisitos
 
