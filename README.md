@@ -1,4 +1,4 @@
-<h1 align="center">Listagem de Vídeos da Leadster</h1>
+<h1 align="center">Leadster Video Listing</h1>
 
  <div align="center"">
    <img width="500" alt="" src="https://github.com/MatheusWAlvarenga/Leadster-Frontend/assets/94935750/9e14cecd-3406-4d06-a156-f9ee0a9dad34">
@@ -7,35 +7,35 @@
 </br>
  <div align="center"">
 
-Este projeto consiste em uma landing page responsiva desenvolvida com o framework Next.js, utilizando TypeScript. O objetivo é exibir uma lista de vídeos e permitir a reprodução dos mesmos em um modal. A listagem de vídeos é configurada através de um arquivo JSON, permitindo uma fácil modificação das URLs dos vídeos.</div>
+This project consists of a responsive landing page developed with the Next.js framework, using TypeScript. The goal is to display a list of videos and allow them to be played in a modal. The list of videos is configured through a JSON file, allowing an easy modification of the video URLs.</div>
 
-## Requisitos
+## Requirements
 
-- Desenvolvimento da landing page utilizando o framework Next.js com TypeScript.
-- Utilização do arquivo de configuração JSON para alterar as URLs dos vídeos exibidos.
-- Fidelidade ao layout fornecido no material "conteúdo test front".
-- Utilização de HTML5 escrito de maneira semântica.
-- Implementação de padrões e código simples e autoexplicativo.
-- Garantir que o layout seja responsivo e se adapte a diferentes dispositivos.
+- Development of the landing page using the Next.js framework with TypeScript.
+- Use of the JSON configuration file to change the URLs of the videos displayed.
+- Fidelity to the layout provided in the "content test front" material.
+- Use of HTML5 written in a semantic way.
+- Implementation of standards and simple, self-explanatory code.
+- Ensuring that the layout is responsive and adapts to different devices.
+  
+## Technologies used
 
-## Tecnologias Utilizadas
+- Next.js: web development framework used to create the landing page.
+- TypeScript: typed programming language used to develop the application.
+- HTML5: markup language for structuring the semantic content of the page.
+- Tailwind CSS: styling framework used to create the visual appearance of the page.
+- JavaScript: used to interact with the page and manipulate the videos.
+- JSON configuration file: used to define the URLs of the videos displayed on the page.
 
-- Next.js: framework de desenvolvimento web utilizado para criar a landing page.
-- TypeScript: linguagem de programação tipada utilizada para desenvolver a aplicação.
-- HTML5: linguagem de marcação para estruturação do conteúdo semântico da página.
-- Tailwind CSS: framework de estilização utilizado para criar a aparência visual da página.
-- JavaScript: utilizado para interação com a página e manipulação dos vídeos.
-- Arquivo de configuração JSON: utilizado para definir as URLs dos vídeos exibidos na página.
+## Installation and Use
 
-## Instalação e Uso
+1. Download or clone this repository.
+2. Navigate to the project directory.
+3. Run the `npm install` command to install the dependencies.
+4. Run the command `npm run dev` to start the development server.
+5. Access the page in your browser at `http://localhost:3000`.
 
-1. Faça o download ou clone este repositório.
-2. Navegue até o diretório do projeto.
-3. Execute o comando `npm install` para instalar as dependências.
-4. Execute o comando `npm run dev` para iniciar o servidor de desenvolvimento.
-5. Acesse a página no seu navegador através do endereço `http://localhost:3000`.
-
-## Estrutura de Arquivos
+## File Structure
 
 ```
 ├── app/
@@ -56,16 +56,16 @@ Este projeto consiste em uma landing page responsiva desenvolvida com o framewor
 └── README.md
 ```
 
-- `components/`: diretório que contém os componentes reutilizáveis da aplicação.
-- `pages/`: diretório que contém as páginas do projeto, sendo `index.tsx` a página principal.
-- `layout/`: diretório que contém o layout global da aplicação.
-- `public/`: diretório que contém arquivos estáticos, como o arquivo de configuração JSON (`videos.json`).
-- `package.json`: arquivo que contém as dependências e scripts do projeto.
-- `README.md`: arquivo que você está lendo atualmente, contendo informações sobre o projeto.
+- `components/`: directory containing the reusable components of the application.
+- `pages/`: directory containing the pages of the project, with `index.tsx` being the main page.
+- `layout/`: directory containing the global layout of the application.
+- `public/`: directory containing static files, such as the JSON configuration file (`videos.json`).
+- `package.json`: file containing the project's dependencies and scripts.
+- `README.md`: file you are currently reading, containing information about the project.
 
 ## Figma
 
-- [Acesse a reconstrução do projeto no Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
+- [Access the project reconstruction on Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
 
 ##
 
