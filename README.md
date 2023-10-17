@@ -63,9 +63,6 @@ This project consists of a responsive landing page developed with the Next.js fr
 - `package.json`: file containing the project's dependencies and scripts.
 - `README.md`: file you are currently reading, containing information about the project.
 
-## Figma
-
-- [Access the project on Figma](https://www.figma.com/file/J7N7xok9Yaqg6leEJbMPoV/leadster?type=design&node-id=0-1&mode=design&t=FCwJWzEvdHZhn2Qc-0)
 
 ##
 
